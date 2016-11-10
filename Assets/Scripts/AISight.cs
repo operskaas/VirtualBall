@@ -66,10 +66,10 @@ public class AISight : MonoBehaviour {
 			RaycastHit hit;
 
 			if (Physics.Raycast (transform.position, direction.normalized, out hit, 100)) {
-
+				Debug.Log(hit.collider.gameObject);
 				if (hit.collider.gameObject == playerHead) {
 					playerInSight = true;
-					//Debug.Log ("Can see player");
+					Debug.Log ("Can see player");
 					//globalLastPlayerSighting.position = player.transform.position;
 					if (!coroutineRunning) {
 						

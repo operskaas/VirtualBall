@@ -1,7 +1,7 @@
 # Virtual Ball
 Virtual Ball is a virtual reality paintball simulation that supports the HTC Vive.
 ## Installation
-The zip file is hosted on itch.io [here](https://www.itch.io/osharp/virtualball)
+The zip file is hosted on itch.io [here](https://osharp.itch.io/virtual-ball)
 
 After downloading, extract the file and run the executable contained within.
 

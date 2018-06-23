@@ -28,11 +28,11 @@ public class AISight : MonoBehaviour {
 		nav = GetComponent<NavMeshAgent> ();
 		//col = GetComponent<SphereCollider> ();
 		anim = GetComponent<Animator>();
-		globalLastPlayerSighting = GameObject.FindGameObjectWithTag("GameController").GetComponent<GlobalLastPlayerSighting>();
-		playerHead = GameObject.FindGameObjectWithTag("MainCamera"); // TODO might need to make more robust when doing multiplayer
+		globalLastPlayerSighting = GameObject.FindWithTag("GameController").GetComponent<GlobalLastPlayerSighting>();
+		playerHead = GameObject.FindWithTag("MainCamera"); // TODO might need to make more robust when doing multiplayer
 		//playerAnim = player.GetComponent<Animator> ();
 		//playerHealth = player.GetComponent <PlayerHealth> ();
-		hash = GameObject.FindGameObjectWithTag ("GameController").GetComponent<HashIDs> ();
+		hash = GameObject.FindWithTag ("GameController").GetComponent<HashIDs> ();
 
 		//personalLastSighting = globalLastPlayerSighting.resetPosition; // reset the position so they don't start the game chasing the player
 		//previousSighting = globalLastPlayerSighting.resetPosition;

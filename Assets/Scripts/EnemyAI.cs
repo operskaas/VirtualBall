@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour {
 	public string enemyTeam;
 
 	private AISight aiSight;
-	private NavMeshAgent nav;
+	private UnityEngine.AI.NavMeshAgent nav;
 	private Transform[] enemyTeamMembers;
 	private PlayerHealth playerHealth;
 	private GlobalLastPlayerSighting globalLastPlayerSighting;
@@ -18,7 +18,7 @@ public class EnemyAI : MonoBehaviour {
 	private int wayPointIndex;
 
 	void Awake(){
-		nav = GetComponent<NavMeshAgent> ();
+		nav = GetComponent<UnityEngine.AI.NavMeshAgent> ();
 		aiSight = GetComponent<AISight> ();
 		globalLastPlayerSighting = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GlobalLastPlayerSighting> ();
 		if (team == "Team0")

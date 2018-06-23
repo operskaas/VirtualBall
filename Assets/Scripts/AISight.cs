@@ -7,7 +7,7 @@ public class AISight : MonoBehaviour {
 	public bool playerInSight;
 	public Vector3 personalLastSighting;
 
-	private NavMeshAgent nav;
+	private UnityEngine.AI.NavMeshAgent nav;
 	//private SphereCollider col;
 	private Animator anim;
 	private GlobalLastPlayerSighting globalLastPlayerSighting; // stores global last player sighting
@@ -25,7 +25,7 @@ public class AISight : MonoBehaviour {
 	void Awake (){
 		coroutineRunning = false;
 		ballShooter = GetComponentInChildren<BallShooter> ();
-		nav = GetComponent<NavMeshAgent> ();
+		nav = GetComponent<UnityEngine.AI.NavMeshAgent> ();
 		//col = GetComponent<SphereCollider> ();
 		anim = GetComponent<Animator>();
 		globalLastPlayerSighting = GameObject.FindWithTag("GameController").GetComponent<GlobalLastPlayerSighting>();

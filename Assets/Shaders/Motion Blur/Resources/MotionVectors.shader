@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Hidden/Motion Vectors" {
 	SubShader {
 		Tags { "RenderType"="Moving" }
@@ -37,7 +39,7 @@ Shader "Hidden/Motion Vectors" {
 					// calculate eye space motion vector
 					float3 eyeMotion = P.xyz - Pprev.xyz;
 					
-					P = mul(UNITY_MATRIX_MVP, v.vertex);
+					P = UnityObjectToClipPos(v.vertex);
 					Pprev = mul(_mvpPrev, v.vertex);
 					
 					// choose previous or current position based

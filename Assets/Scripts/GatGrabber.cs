@@ -77,12 +77,10 @@ public class GatGrabber : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider collider){
+		// Used to grip the gat for the first time. Subsequent grip presses will restart the game if the game is over.
 		if (collider.name == "Gat") {
-			//Debug.Log ("triggered with with gatttttt");
-			if (device.GetTouchDown (SteamVR_Controller.ButtonMask.Grip)) {
-
+			if (device.GetPressDown (SteamVR_Controller.ButtonMask.Grip)) {
 				if (!gunAttached) {
-					//Debug.Log ("you have pushed down the grip while triggered");
 					gunAttached = true;
 					RumbleController (0.03f, 700f);
 					collider.gameObject.transform.SetParent (gameObject.transform);
